@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+/*Adding fonts*/
+/*For titles and headers*/
+@font-face {
+  font-family: bigbold;
+  src: url("fonts/bigandbold.otf");
+}
+/*For descriptions, paragraphs, and buttons*/
+@font-face {
+  font-family: basicFont;
+  src: url("fonts/basicFont.ttf");
+}
+body {
+  background-color: black;
+}
+p {
+  color: white;
+  font-size: 20px;
+}
+h1 {
+  color: white;
+  font-family: bigbold;
+  font-size: 50px;
+  }
+/*Style for the main title (Title at the top of first page)*/
+#mainTitle {
+  color: white;
+  font-size: 90px;
+  text-align: left;
+  margin-left: -2px;
+  }
+#mainTitle:hover {
+  text-shadow: 0px 0px 5px white;
+}
+#mainTitle:active {
+  text-shadow: 0px 0px 15px white;
+}
+h2 {
+  color: white;
+  font-family: bigbold;
+  font-size: 50px;
+  text-align: left;
+}
+h3 {
+  color: white;
+  font-family: bigbold;
+  font-size: 30px;
+  text-align: left;
+}
+/*Title at Top */
+.titleDiv{
+  background-color: black;
+  width: 100%;
+  padding: 25px;
+  padding-bottom: 0px;
+  text-align: left;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+}
