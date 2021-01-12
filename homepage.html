@@ -11,16 +11,62 @@
     <style type = "text/css">
     </style>
   </head>
-  <body>
+  <body onload="loadReview()">
     <!-- -->
-    <div id = "MainDiv">
-      <h1 id = "Title" onclick="doSomething()">Click to End</h1>
-      <p id = "Desc">Try out one of the input tags! (Text Box, Radio, and Checkbox). Your input will show up in this description. Just hit the title when you're done!</p>
-    </div>
-    <div>
-      <h3>Text Box Input</h3>
-      <input type="text" id="UserTag"></input>
+
+    <!-- Top Div -->
+    <div id = "TopDiv">
+      <h1 id = "Title" onclick="doSomething()">BUSINESS.COM</h1>
+      <p id = "Desc">We get it done.</p>
+      <hr></hr>
     </div>
 
+    <!-- Product Title -->
+    <div id="TitleAndDesc">
+      <h2 id = "ProductName">Product 2019 Limited Edition</h2>
+    </div>
+
+    <!-- Middle Content Div -->
+    <div id = "MainContent">
+        <!-- Product Preview -->
+        <div id = "ProductPreview">
+          <img id = "ProductImage" src = "images/Box1.jpg" alt = "Product Image"></img>
+          <hr></hr>
+          <p>A very high quality product. Includes 2-year warraty.</p>
+        </div>
+
+        <div id = "RightSideContent">
+          <!-- Product Selection -->
+          <div id = "ProductType">
+            <h2>Choose Product Size</h2>
+            <input type ="radio" name ="Size" id = "Small" value = "Small" onclick = "changeProductType()" ></input>
+            <label for = "Small">Small</label>
+            <input type ="radio" name ="Size" id = "Medium" value = "Medium" onclick = "changeProductType()" ></input>
+            <label for = "Medium">Medium</label>
+            <input type ="radio" name ="Size" id = "Large" value = "Large" onclick = "changeProductType()" ></input>
+            <label for = "Large">Large</label>
+          </div>
+          <hr></hr>
+          <div id = "OtherSelections">
+            <h2>Shipping Options</h2>
+            <input type="checkbox" id = "ShippingOption" onclick = "changeShippingOption()"></input>
+            <label for = "ShippingOption">Expedite Shipping</label>
+            <hr></hr>
+          </div>
+        </div>
+
+        <!-- Write a Review -->
+        <div id = "WriteReviewDiv">
+          <h3>Write a Review</h3>
+          <input type="text" id="UserReview"></input>
+          <button onclick='postReview()'>Post Review</button>
+        </div>
+
+        <!-- All Reviews-->
+        <div id = "Reviews">
+          <h3>This is an example review. ***--</h3>
+          <p>This sucks</h3>
+        </div>
+    </div>
   </body>
 </html>

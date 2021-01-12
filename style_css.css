@@ -1,11 +1,12 @@
 * {
   box-sizing: border-box;
 }
+@accent: #e74c3c;
 /*Adding fonts*/
 /*For titles and headers*/
 @font-face {
-  font-family: bigbold;
-  src: url("fonts/bigandbold.otf");
+  font-family: titleFont;
+  src: url("fonts/TitleFont.ttf");
 }
 /*For descriptions, paragraphs, and buttons*/
 @font-face {
@@ -16,14 +17,43 @@ body {
   background-color: black;
 }
 p {
-  color: white;
-  font-size: 20px;
+  color: grey;
+  font-family: basicFont;
+  font-size: 25px;
+  margin-bottom: -5px;
+  margin-top: 0px;
 }
 h1 {
   color: white;
-  font-family: bigbold;
+  font-family: titleFont;
+  font-size: 70px;
+  margin: 0px;
+  padding: 0px;
+}
+h2 {
+  color: white;
+  font-family: titleFont;
   font-size: 50px;
-  }
+  text-align: left;
+  margin: 0px;
+}
+h3 {
+  color: white;
+  font-family: titleFont;
+  font-size: 35px;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+}
+label {
+  color: white;
+  font-family: basicFont;
+  font-size: 20px;
+}
+hr {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 /*Style for the main title (Title at the top of first page)*/
 #mainTitle {
   color: white;
@@ -37,20 +67,8 @@ h1 {
 #mainTitle:active {
   text-shadow: 0px 0px 15px white;
 }
-h2 {
-  color: white;
-  font-family: bigbold;
-  font-size: 50px;
-  text-align: left;
-}
-h3 {
-  color: white;
-  font-family: bigbold;
-  font-size: 30px;
-  text-align: left;
-}
 /*Title at Top */
-.titleDiv{
+.TitleDiv{
   background-color: black;
   width: 100%;
   padding: 25px;
@@ -59,4 +77,61 @@ h3 {
   overflow: hidden;
   display: inline-block;
   float: left;
+}
+#RightSideContent{
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+}
+#ProductPreview{
+  background-color: white;
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+}
+#ProductPreview p{
+  color: black;
+}
+#ProductPreview img{
+  border-radius: 10px;
+  box-shadow:  0px 5px 15px black;
+}
+#WriteReviewDiv{
+  background-color: white;
+  width: 40%;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: left;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+}
+#WriteReviewDiv p{
+  color: black;
+}
+#WriteReviewDiv h3{
+  color: black;
+}
+#Reviews{
+  background-color: white;
+  width: 40%;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: left;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+}
+#Reviews h3{
+  color: black;
 }
