@@ -47,25 +47,40 @@
             <label for = "Large">Large</label>
           </div>
           <hr></hr>
-          <div id = "OtherSelections">
-            <h2>Shipping Options</h2>
-            <input type="checkbox" id = "ShippingOption" onclick = "changeShippingOption()"></input>
-            <label for = "ShippingOption">Expedite Shipping</label>
-            <hr></hr>
-          </div>
         </div>
 
         <!-- Write a Review -->
         <div id = "WriteReviewDiv">
           <h3>Write a Review</h3>
-          <input type="text" id="UserReview"></input>
+          <!-- Review Stars -->
+          <input type ="radio" name ="StarReview" id = "1Star" value = "1"></input>
+          <label for = "1Star">&#9733;</label>
+          <input type ="radio" name ="StarReview" id = "2Star" value = "2"></input>
+          <label for = "2Star">&#9733;&#9733;</label>
+          <input type ="radio" name ="StarReview" id = "3Star" value = "3"></input>
+          <label for = "3Star">&#9733;&#9733;&#9733;</label>
+          <input type ="radio" name ="StarReview" id = "4Star" value = "4"></input>
+          <label for = "4Star">&#9733;&#9733;&#9733;&#9733;</label>
+          <input type ="radio" name ="StarReview" id = "5Star" value = "5"></input>
+          <label for = "5Star">&#9733;&#9733;&#9733;&#9733;&#9733;</label>
+          <hr></hr>
+          <label for = "UserReviewName" placeholder = "Name">Appearance Name</label>
+          <br></br>
+          <input type="text" id="UserReviewName"></input>
+          <hr></hr>
+          <label for = "UserReview">Write Review:</label>
+          <br></br>
+          <textarea id = "UserReview" class = "UserReviewBox"></textarea>
+          <br></br>
           <button onclick='postReview()'>Post Review</button>
         </div>
 
         <!-- All Reviews-->
-        <div id = "Reviews">
-          <h3>This is an example review. ***--</h3>
-          <p>This sucks</h3>
+        <div id = "Review">
+          <h3 id = "ReviewName">Empty Name</h3>
+          <label for = "ReviewName" id = "ReviewStarCount">No stars</label>
+          <hr></hr>
+          <p id = "ReviewText">Empty review.</h3>
         </div>
     </div>
   </body>

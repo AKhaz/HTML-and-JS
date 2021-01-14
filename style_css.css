@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-@accent: #e74c3c;
 /*Adding fonts*/
 /*For titles and headers*/
 @font-face {
@@ -48,11 +47,28 @@ h3 {
 label {
   color: white;
   font-family: basicFont;
-  font-size: 20px;
+  font-size: 25px;
 }
 hr {
   margin-bottom: 20px;
   margin-top: 20px;
+}
+button{
+  background-color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 200px;
+  height: 50px;
+  border-style: ridge;
+  color: white;
+  font-size: 20px;
+  font-family: basicFont;
+}
+button:hover{
+  box-shadow: 0px 0px 10px black;
 }
 /*Style for the main title (Title at the top of first page)*/
 #mainTitle {
@@ -91,6 +107,7 @@ hr {
   background-color: white;
   width: 50%;
   padding: 20px;
+  margin: 10px;
   border-radius: 10px;
   text-align: center;
   overflow: hidden;
@@ -121,7 +138,10 @@ hr {
 #WriteReviewDiv h3{
   color: black;
 }
-#Reviews{
+#WriteReviewDiv label{
+  color: black;
+}
+#Review{
   background-color: white;
   width: 40%;
   padding: 20px;
@@ -132,6 +152,20 @@ hr {
   display: inline-block;
   float: left;
 }
-#Reviews h3{
+#Review h3{
   color: black;
+}
+#Review label{
+  color: grey;
+}
+#Review p{
+  color: black;
+}
+.UserReviewBox{
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  font-family: basicFont;
+  font-size: 25px;
+  padding: 5px;
 }
