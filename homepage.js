@@ -32,14 +32,18 @@ function postReview(){
     "StarCount" : starString,
     "Review" : userReview,
   }
-  var JSONList = JSON.parse(localStorage.getItem("ReviewJSONList"));
+  JSONList = JSON.parse(localStorage.getItem("ReviewJSONList"));
+  if (JSONList == null){
+    console.log("Is null");
+    JSONList = [];
+  }
   //JSONList = localStorage.getItem("ReviewJSONList");
-  JSONList.push(JSON.stringify(myJSON));
+  JSONList.push(myJSON);
   console.log(JSONList);
-  localStorage.setItem("ReviewJSONList", JSONList)
+  localStorage.setItem("ReviewJSONList", JSON.stringify(JSONList));
   console.log(localStorage.getItem("ReviewJSONList"));
 
-  review.innerHTML = "<h3 id = 'ReviewName'>" + myJSON["Name"] + "</h3>\n<label for = 'ReviewName' id = 'ReviewStarCount'>" + myJSON["StarCount"] + "</label>\n<hr></hr>\n<p id = 'ReviewText'>" + myJSON["Review"] + "</h3>"
+  review.innerHTML += "<h3 id = 'ReviewName'>" + myJSON["Name"] + "</h3>\n<label for = 'ReviewName' id = 'ReviewStarCount'>" + myJSON["StarCount"] + "</label>\n<p id = 'ReviewText'>" + myJSON["Review"] + "</h3><hr></hr>"
 
   //localStorage.setItem("lastReviewTest", userReview);
 }
@@ -47,12 +51,17 @@ function postReview(){
 function loadReview(){
   var review = document.getElementById("Review")
   var JSONList = JSON.parse(localStorage.getItem("ReviewJSONList"));
-  console.log(JSONList);
-  for (i = 0; i < JSONList.children.length; i++) {
-    var myJSON = JSON.parse(JSONList.children.item(i))
+  for (i in JSONList){
+    var myJSON = JSONList[i];
+    //console.log(myJSON);
     review.innerHTML += "<h3 id = 'ReviewName'>" + myJSON["Name"] + "</h3>\n<label for = 'ReviewName' id = 'ReviewStarCount'>" + myJSON["StarCount"] + "</label>\n<p id = 'ReviewText'>" + myJSON["Review"] + "</h3>\n<hr></hr>"
   }
   //var JSON = JSON.parse(localStorage.getItem("ReviewJSON"));
+}
+
+function resetReviews(){
+  JSONList = [];
+  localStorage.setItem("ReviewJSONList", JSON.stringify(JSONList));
 }
 
 function changeProductType(){
